@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[4]:
 
 
 import streamlit as st
@@ -10,7 +10,7 @@ import streamlit as st
 biomarker_data = [
     {'biomarker': 'DHEA', 'relationship_ref_range': '<=', 'reference_range': 150, 'vitamin_supplement': 'DHEA 10 mg', 'times_day': 1},
     {'biomarker': 'DHEA', 'relationship_ref_range': '>=', 'reference_range': 300, 'vitamin_supplement': 'Mood Food', 'times_day': 2},
-    {'biomarker': 'Cortisol', 'relationship_ref_range': '<=', 'reference_range': 4, 'vitamin_supplement': 'Adrenal Extra Strength', 'times_day': 1},
+    {'biomarker': 'Cortisol', 'relationship_ref_range': '<=', 'reference_range': 4, 'vitamin_supplement': 'Adrenal Essence Extra Strength', 'times_day': 1},
     {'biomarker': 'Cortisol', 'relationship_ref_range': 'between', 'reference_range': '5.0-9.0', 'vitamin_supplement': 'Adrenal Essence', 'times_day': 1},
     {'biomarker': 'Cortisol', 'relationship_ref_range': '>=', 'reference_range': 20, 'vitamin_supplement': 'Mood Food', 'times_day': 1},
     {'biomarker': 'Vitamin D', 'relationship_ref_range': '<=', 'reference_range': 30, 'vitamin_supplement': 'Vitamin D 10000 IU', 'times_day': 1},
