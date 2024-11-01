@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[6]:
 
 
 import streamlit as st
@@ -15,8 +15,8 @@ biomarker_data = [
     {'biomarker': 'Cortisol', 'relationship_ref_range': '>=', 'reference_range': 20, 'vitamin_supplement': 'Mood Food', 'times_day': 1},
     {'biomarker': 'Vitamin D', 'relationship_ref_range': '<=', 'reference_range': 30, 'vitamin_supplement': 'Vitamin D 10000 IU', 'times_day': 1},
     {'biomarker': 'Vitamin D', 'relationship_ref_range': 'between', 'reference_range': '31-80', 'vitamin_supplement': 'Vitamin D 5000 IU', 'times_day': 1},
-    {'biomarker': 'Trigliceride', 'relationship_ref_range': '>=', 'reference_range': 110, 'vitamin_supplement': 'Liver Detox', 'times_day': 2},
-    {'biomarker': 'Trigliceride', 'relationship_ref_range': '>=', 'reference_range': 110, 'vitamin_supplement': 'Glycemic Factors', 'times_day': 2},
+    {'biomarker': 'Triglyceride', 'relationship_ref_range': '>=', 'reference_range': 110, 'vitamin_supplement': 'Liver Detox', 'times_day': 2},
+    {'biomarker': 'Triglyceride', 'relationship_ref_range': '>=', 'reference_range': 110, 'vitamin_supplement': 'Glycemic Factors', 'times_day': 2},
     {'biomarker': 'A1c', 'relationship_ref_range': 'between', 'reference_range': '5.7-6.4', 'vitamin_supplement': 'Glycemic Factors', 'times_day': 2},
     {'biomarker': 'A1c', 'relationship_ref_range': '>=', 'reference_range': 6.5, 'vitamin_supplement': 'Glycemic Factors', 'times_day': 2},
     {'biomarker': 'Folate', 'relationship_ref_range': '<=', 'reference_range': 600, 'vitamin_supplement': 'Methyl Protect', 'times_day': 1},
@@ -102,11 +102,11 @@ for biomarker in {row['biomarker'] for row in biomarker_data}:
 if st.sidebar.button("Get Recommendations"):
     recommendations, would_have_been = get_vitamin_recommendations(lab_values)
 
-    st.subheader("Recommended Supplements")
+    st.subheader("Recommended Supplements:")
     for rec in recommendations:
         st.write(f"{rec['biomarker']}: {rec['vitamin_supplement']} - {rec['times_day']} time(s) per day")
 
-    st.subheader("Supplements That Would Have Been Recommended (but are already allocated)")
+    st.subheader("Supplements That Would Have Been Recommended (but are already allocated):")
     for rec in would_have_been:
         st.write(f"{rec['biomarker']}: {rec['vitamin_supplement']} - {rec['times_day']} time(s) per day")
 
